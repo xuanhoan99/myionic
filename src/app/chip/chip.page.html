@@ -1,9 +1,58 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>Chip</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list-header>
+    <ion-label>Defalt</ion-label>  
+  </ion-list-header>
+  <ion-chip>Defalt</ion-chip>
+  <ion-chip>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Avatar Chip</ion-label>
+  </ion-chip>
+  <ion-chip>
+    <ion-icon name="checkmark-circle"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+  </ion-chip>
+  
+  <ion-list-header>
+    <ion-label>Colors</ion-label>
+  </ion-list-header>
+  <ion-chip color="primary">Primary</ion-chip>
+  <ion-chip color="secondary">Secondary</ion-chip>
+  <ion-chip color="tertiary">Tertiary</ion-chip>
 
+  <ion-list-header>
+    <ion-label>Outline</ion-label>
+  </ion-list-header>
+  <ion-chip [outline]="true" color="primary">Primary</ion-chip>
+  <ion-chip [outline]="true" color="secondary">Secondary</ion-chip>
+  <ion-chip [outline]="true" color="tertiary">Tertiary</ion-chip>
+
+  <ion-list-header>
+    <ion-label>Icons</ion-label>
+  </ion-list-header>
+  <ion-chip [outline]="true" color="primary">
+    <ion-icon name="pin" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  <ion-chip [outline]="true" color="secondary">
+    <ion-icon name="airplane" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  <ion-chip [outline]="true" color="tertiary">
+    <ion-icon name="alarm" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
 </ion-content>

@@ -47,6 +47,10 @@ export class HomePage {
       name: "Card"
     },
     {
+      link: "/check-box",
+      name: "Check Box"
+    },
+    {
       link: "/chip",
       name: "Chip"
     },

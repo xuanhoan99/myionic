@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>datetime</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list inset="true">
+    <ion-item>
+      <ion-input placeholder="Title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+  </ion-list>
 
+  <ion-list inset="true">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header">
+          <ion-label>Starts</ion-label>
+          <ion-input value="Title"></ion-input>
+        </ion-item>
+      </ion-accordion>
+     
+    </ion-accordion-group>
+    
+    <ion-item>
+      <ion-label>End</ion-label>
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>
