@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
   <ion-list inset="true">
     <ion-item>
       <ion-input placeholder="Title"></ion-input>
@@ -16,21 +16,36 @@
       <ion-input placeholder="Location"></ion-input>
     </ion-item>
   </ion-list>
-
-  <ion-list inset="true">
+ 
+  <ion-list inset={true}>
     <ion-accordion-group>
-      <ion-accordion value="first">
+      <ion-accordion value="start">
         <ion-item slot="header">
           <ion-label>Starts</ion-label>
-          <ion-input value="Title"></ion-input>
+          <ion-note slot="end">j</ion-note>
         </ion-item>
+        <ion-datetime slot="content" presentation="date-time" onIonChange={this.onStartChange}></ion-datetime>
       </ion-accordion>
-     
+      <ion-accordion value="end">
+        <ion-item slot="header">
+          <ion-label>Ends</ion-label>
+          <ion-note slot="end">k</ion-note>
+        </ion-item>
+        <ion-datetime slot="content" presentation="date-time" onIonChange={this.onEndChange}></ion-datetime>
+      </ion-accordion>
     </ion-accordion-group>
-    
     <ion-item>
-      <ion-label>End</ion-label>
-      <ion-input placeholder="Location"></ion-input>
+      <ion-label>Repeat</ion-label>
+      <ion-note slot="end">Never</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Travel Time</ion-label>
+      <ion-note slot="end">None</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-note slot="end">None</ion-note>
     </ion-item>
   </ion-list>
+
 </ion-content>

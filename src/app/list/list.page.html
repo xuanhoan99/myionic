@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>list</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content fullscreen="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>header</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of items; let i= index">
+      <ion-avatar slot="start">
+        <img [src]="'https://picsum.photos/80/80?random=' + i" alt="avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.value }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

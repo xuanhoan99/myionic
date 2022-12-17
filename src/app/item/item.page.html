@@ -1,9 +1,76 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>item</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+  <ion-list-header>
+    <ion-label>icon items</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-icon name="alarm" slot="start"></ion-icon>
+    <ion-label>Label</ion-label>
+  </ion-item><ion-item>
+    <ion-icon name="heart" slot="start"></ion-icon>
+    <ion-label>Label</ion-label>
+  </ion-item>
 
+  <ion-list-header>
+    <ion-label>media items</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Label</ion-label>
+  </ion-item><ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Label</ion-label>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>sliding items</ion-label>
+  </ion-list-header>
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success">Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-label>Sliding Item with Options on Both Sides</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger">Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-list-header>
+    <ion-label>input & controls</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Label</ion-label>
+    <ion-note slot="end">Note (End)</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end" checked></ion-toggle>
+  </ion-item>
+  
+  <ion-item>
+    <ion-checkbox slot="end" checked></ion-checkbox>
+    <ion-label>Checkbox</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Fixed Label</ion-label>
+    <ion-input slot="end" placeholder="Enter text"></ion-input>
+  </ion-item>
 </ion-content>

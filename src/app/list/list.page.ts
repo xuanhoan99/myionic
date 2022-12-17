@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
 
-  constructor() { }
+  items :any =[];
 
   ngOnInit() {
+    this.generateItems();
+  }
+
+  private generateItems() {
+    const count = this.items.length + 1;
+    for (let i = 0; i < 50; i++) {
+      this.items.push({name:`Item ${count + i}`,value:`text ${count + i}`})
+    }
   }
 
 }

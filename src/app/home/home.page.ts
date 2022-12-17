@@ -67,8 +67,8 @@ export class HomePage {
       name: "Floating Action Button"
     },
     {
-      link: "/gird",
-      name: "Gird"
+      link: "/grid",
+      name: "Grid"
     },
     {
       link: "/icons",
@@ -85,6 +85,10 @@ export class HomePage {
     {
       link: "/item",
       name: "Item"
+    },
+    {
+      link: "/item-group",
+      name: "Item Group"
     },
     {
       link: "/list",
