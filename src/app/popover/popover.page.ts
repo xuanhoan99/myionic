@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-popover',
@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopoverPage implements OnInit {
 
+  @ViewChild('popover') popover : any;
+
+  isOpen = false;
+
+  presentPopover(e: Event) {
+    this.popover.event = e;
+    this.isOpen = true;
+  }
   constructor() { }
 
   ngOnInit() {
