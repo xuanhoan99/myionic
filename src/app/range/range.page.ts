@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class RangePage implements OnInit {
 
   constructor() { }
-
+  pinFormatter(value: number) {
+    return `-${value}`;
+  }
   ngOnInit() {
   }
 

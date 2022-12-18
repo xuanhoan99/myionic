@@ -1,9 +1,59 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>progress bar</ion-title>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Determinate</ion-label>
+    </ion-list-header>
+    <ion-progress-bar value="0.2"></ion-progress-bar>
+  </ion-list>
 
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Determinate control</ion-label>
+      <ion-button (click)="progressAdd()">
+        <ion-icon name="add" slot="icon-only" ></ion-icon>
+      </ion-button>
+    </ion-list-header>
+    <ion-progress-bar [value]="progress"></ion-progress-bar>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Indeterminate</ion-label>
+    </ion-list-header>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+ 
+    <ion-list-header>
+      <ion-label>Indeterminate</ion-label>
+    </ion-list-header>
+    <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+ 
+    <ion-list-header>
+      <ion-label>Buffer</ion-label>
+    </ion-list-header>
+    <ion-progress-bar value=".25" buffer=".5"></ion-progress-bar>
+  
+    <ion-list-header>
+      <ion-label>Color</ion-label>
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-progress-bar type="indeterminate" color="success"></ion-progress-bar>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-progress-bar type="indeterminate" reversed="true" color="tertiary"></ion-progress-bar>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-progress-bar value=".25" buffer=".5" color="danger"></ion-progress-bar>
+    </ion-item>    
+  </ion-list>
+  
 </ion-content>
