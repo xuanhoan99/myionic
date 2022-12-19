@@ -1,9 +1,74 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>select</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Select Trip</ion-label>
+    </ion-list-header>
 
+    <ion-item>
+      <ion-label position="stacked">Origin</ion-label>
+      <ion-select placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>  
+
+    <ion-item>
+      <ion-label position="stacked">Destination</ion-label>
+      <ion-select placeholder="Select fruit" disabled="true">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">passengers</ion-label>
+      <ion-select placeholder="Select fruit" value="apples">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Add-ons</ion-label>
+      <ion-select placeholder="Select fruit"  [multiple]="true">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Select Interfaces</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="stacked">Gender</ion-label>
+      <ion-select interface="popover" placeholder="gender">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">mute Notifications</ion-label>
+      <ion-select interface="action-sheet" placeholder="Action Sheet Interface">
+        <ion-select-option value="mute_15">For 15 Minutes</ion-select-option>
+        <ion-select-option value="mute_1">For 1 Hour</ion-select-option>
+        <ion-select-option value="mute_23">For 24 Hours</ion-select-option>
+        <ion-select-option value="mute_inf">Until I turn it back on</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>

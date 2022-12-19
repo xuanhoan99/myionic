@@ -1,9 +1,181 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-segment value="all">
+      <ion-segment-button value="all">All</ion-segment-button>
+      <ion-segment-button value="favorites">Favorites</ion-segment-button>
+    </ion-segment>    
+  </ion-toolbar>
+  <ion-toolbar>
     <ion-title>segment</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+    <ion-list-header>
+      <ion-label>Colors</ion-label>
+    </ion-list-header>
 
+    <ion-segment value="call">
+      <ion-segment-button value="call">
+        <ion-label>Call</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favorite">
+        <ion-label>Favorite</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="map">
+        <ion-label>Map</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-segment color="primary" value="call">
+      <ion-segment-button value="call">
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="favorite">
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="map">
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-segment color="secondary" value="heart">
+      <ion-segment-button value="call">
+        <ion-label>Call</ion-label>
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart">
+        <ion-label>Heart</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="pin">
+        <ion-label>Pin</ion-label>
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+     
+    <ion-segment color="tertiary" value="heart">
+      <ion-segment-button value="call" layout="icon-bottom">
+        <ion-label>Call</ion-label>
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart" layout="icon-bottom">
+        <ion-label>Heart</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="pin" layout="icon-bottom">
+        <ion-label>Pin</ion-label>
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    
+    <ion-segment color="success" value="heart">
+      <ion-segment-button value="call" layout="icon-start">
+        <ion-label>Call</ion-label>
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart" layout="icon-start">
+        <ion-label>Heart</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="pin" layout="icon-start">
+        <ion-label>Pin</ion-label>
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    
+    <ion-segment color="warning" value="heart">
+      <ion-segment-button value="call" layout="icon-end">
+        <ion-label>Call</ion-label>
+        <ion-icon name="call"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart" layout="icon-end">
+        <ion-label>Heart</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="pin" layout="icon-end">
+        <ion-label>Pin</ion-label>
+        <ion-icon name="pin"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Scrollable</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-segment [scrollable]="true" value="heart">
+          <ion-segment-button value="home">
+            <ion-label>Call</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="heart">
+            <ion-label>Favorite</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="pin">
+            <ion-label>Map</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="star">
+            <ion-label>Watch</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="call">
+            <ion-label>Account</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="globe">
+            <ion-label>Settings</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="basket">
+            <ion-label>Profile</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="barbell">
+            <ion-icon name="barbell"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="trash">
+            <ion-icon name="trash"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="person">
+            <ion-icon name="person"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>    
+  
+      <ion-item>
+        <ion-segment [scrollable]="true" value="heart">
+          <ion-segment-button value="home">
+            <ion-icon name="home"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="heart">
+            <ion-icon name="heart"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="pin">
+            <ion-icon name="pin"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="star">
+            <ion-icon name="star"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="call">
+            <ion-icon name="call"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="globe">
+            <ion-icon name="globe"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="basket">
+            <ion-icon name="basket"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="barbell">
+            <ion-icon name="barbell"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="trash">
+            <ion-icon name="trash"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="person">
+            <ion-icon name="person"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+    </ion-list>
+    
+    
 </ion-content>

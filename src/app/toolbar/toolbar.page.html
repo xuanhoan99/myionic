@@ -1,9 +1,86 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>toolbar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-segment value="all">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Toolbar</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
+    </ion-item>
 
+    <ion-item>
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>Icon Buttons</ion-title>
+      </ion-toolbar>
+    </ion-item>
+
+    <ion-item>
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button>
+            End
+          </ion-button>
+          <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+          </ion-button>          
+        </ion-buttons>
+        <ion-title>Icon Buttons</ion-title>
+      </ion-toolbar>
+    </ion-item>
+
+    <ion-item>
+      <ion-toolbar>
+        <ion-buttons slot="start"> 
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon slot="icon-only" name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-item>
+
+    <ion-item>
+      <ion-toolbar>
+        <ion-progress-bar value="0.25"></ion-progress-bar>
+      </ion-toolbar>
+    </ion-item>
+  </ion-list>
+ 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer Toolbar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="changeText" (click)=this.toggleText()>
+        <ion-icon slot="start" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -11,5 +11,9 @@ export class SlidesPage implements OnInit {
 
   ngOnInit() {
   }
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
 }

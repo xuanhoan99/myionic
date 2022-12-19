@@ -11,5 +11,18 @@ export class ToolbarPage implements OnInit {
 
   ngOnInit() {
   }
+  toggleText() {
+    const button = document.getElementById('changeText');
+    const hasText = document.getElementById('childText');
+
+    if (hasText) {
+      button!.removeChild(hasText);
+    } else {
+      const text = document.createElement('span');
+      text.innerHTML = 'Toggle';
+      text.id = 'childText';
+      button!.appendChild(text);
+    }
+  }
 
 }
