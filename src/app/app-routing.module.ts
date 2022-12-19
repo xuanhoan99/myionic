@@ -189,7 +189,11 @@ const routes: Routes = [
   {
     path: 'toolbar',
     loadChildren: () => import('./toolbar/toolbar.module').then( m => m.ToolbarPageModule)
+  },  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
   },
+
 
 ];
 

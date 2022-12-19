@@ -15,6 +15,10 @@ export class HomePage {
 
   items = [
     {
+      link: "/cart",
+      name: "Cart"
+    },
+    {
       link: "/accordion",
       name: "Accordion"
     },
