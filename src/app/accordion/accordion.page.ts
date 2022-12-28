@@ -22,7 +22,7 @@ export class AccordionPage implements OnInit {
     console.log("ionViewWillLeavea")
   }
   ionViewDidLeave(){
-    console.log("ionViewDidLeavea")
+    console.log("ionViewDidLeaveaa")
   }
 
 
