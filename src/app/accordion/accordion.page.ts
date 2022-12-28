@@ -10,6 +10,20 @@ export class AccordionPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("ngoninita")
   }
+  ionViewWillEnter(){
+    console.log("ionViewWillEntera")
+  }
+  ionViewDidEnter(){
+    console.log("ionViewDidEntera")
+  }
+  ionViewWillLeave(){
+    console.log("ionViewWillLeavea")
+  }
+  ionViewDidLeave(){
+    console.log("ionViewDidLeavea")
+  }
+
 
 }

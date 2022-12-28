@@ -10,7 +10,21 @@ import { RefresherCustomEvent } from '@ionic/angular';
 })
 export class HomePage {
   // constructor(private data: DataService) { }
-
+  ngOnInit() {
+    console.log("ngoninith")
+  }
+  ionViewWillEnter(){
+    console.log("ionViewWillEnterh")
+  }
+  ionViewDidEnter(){
+    console.log("ionViewDidEnterh")
+  }
+  ionViewWillLeave(){
+    console.log("ionViewWillLeaveh")
+  }
+  ionViewDidLeave(){
+    console.log("ionViewDidLeaveh")
+  }
   constructor() {  }
 
   items = [
